@@ -1,0 +1,32 @@
+<div id="container" class="row mt-5">
+  <div class="col-md-6 mb-3" *ngFor="let item of items" >
+    
+  <mat-card style="display:table;"class="item-card">
+    <img src="https://cdn.europosters.eu/image/750/posters/puss-in-boots-cats-eye-i11026.jpg" style=" width:100px; height: auto; display:block; float: left;margin-right: 15px;">
+    <mat-card-header>
+     <mat-card-title style="display:flex">Data Structures and Algorithms</mat-card-title>
+      <mat-card-subtitle style="display:block">
+        Btech Year {{item.year}} <p style="float:right;">Author: {{item.name}}</p>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        A brief overview of the life of Dr Gagan Lal, written from the lecture of Dr Sakthivel
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+      <div class="container"><div class="pages">Pages: {{item.pages}}
+      <div class="rating">
+        <mat-icon *ngIf="item.rating>0">star_rate</mat-icon>  <mat-icon *ngIf="item.rating>1">star_rate</mat-icon>
+        <mat-icon *ngIf="item.rating>2">star_rate</mat-icon>  <mat-icon *ngIf="item.rating>3">star_rate</mat-icon>
+        <mat-icon *ngIf="item.rating>4">star_rate</mat-icon>
+
+        <mat-icon *ngIf="5>item.rating">star_outline</mat-icon>  <mat-icon *ngIf="4>item.rating">star_outline</mat-icon>
+        <mat-icon *ngIf="3>item.rating>2">star_outline</mat-icon>  <mat-icon *ngIf="2>item.rating>3">star_outline</mat-icon>
+        <mat-icon *ngIf="1>item.rating>4">star_outline</mat-icon>
+    </div>
+      </div></div>
+    </mat-card-footer>
+  </mat-card>
+  </div>
+</div>

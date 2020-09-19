@@ -1,0 +1,103 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+.mat-toolbar{
+  background-color: rgb(25, 25, 141);
+  color: white;
+}
+.mat-icon{
+  cursor: pointer;
+  margin: 12px;
+}
+#name{
+  font-family: cursive;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: 'Times New Roman', sans-serif;
+}
+
+/* options bg */
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042250;
+  
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #023456;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 18px;
+  color: white;
+  padding-left: 30px;
+  box-sizing: border-box;
+  
+ 
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: block;
+}
+label #btn,label #cancel{
+  position: absolute;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+}
+label #btn{
+  left: 7px;
+  top: 0px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+}
+
+/* The cancel button */
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 4px 9px;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
